@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+}
+.tabs span {
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+.tabs span.active {
+    border-bottom: 2px solid blue;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+.input-container {
+    display: flex;
+    margin-bottom: 1rem;
+}
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none; 
+}
+.input-container button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-item input[type="checkbox"]:checked {
+    background-color: rgb(26, 120, 234);
+    border: none;
+    position: relative;
+}
+.todo-item input[type="checkbox"]:checked::after {
+    content: '\2713'; /* Unicode checkmark */
+    color: white;
+    font-size: 16px;
+}
+.todo-item.completed label {
+    text-decoration: line-through;
+    color: gray;
+}

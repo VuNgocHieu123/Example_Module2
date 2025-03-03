@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Bài Viết</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <h2 class="post-title">Danh Sách Bài Viết</h2>
+
+    <!-- Form tìm kiếm Post theo ID -->
+    <form id="searchPostById">
+        <input type="number" id="postIdInput" placeholder="Nhập ID bài viết" required>
+        <button type="submit">Tìm kiếm</button>
+    </form>
+
+    <div class="container">
+        <!-- Danh sách bài viết -->
+        <section class="content-section">
+            <input type="text" id="searchPosts" class="post-search" placeholder="Tìm kiếm theo tiêu đề hoặc nội dung...">
+            <table class="post-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tiêu Đề</th>
+                        <th>Ngày Tạo</th>
+                        <th>Người Tạo</th>
+                    </tr>
+                </thead>
+                <tbody id="postList"></tbody>
+            </table>
+            <div id="pagination" class="pagination"></div>
+        </section>
+
+        <!-- Chi tiết bài viết -->
+        <aside id="postDetail"></aside>
+    </div>
+
+    <a href="userList.html" class="post-link">Xem danh sách người dùng</a>
+
+    <script type="module" src="../JAVASCRIPT/main.js" defer></script>
+</body>
+</html>
